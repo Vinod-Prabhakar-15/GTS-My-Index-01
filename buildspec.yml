@@ -12,8 +12,8 @@ phases:
   post_build:
     commands:
       - echo "Deploying static web application to S3..."
-      - aws s3 sync s3://demo-web-app-code
+      - aws s3 sync . s3://vin-dem-buc-01
 
 artifacts:
   files:
-    - '**/*'  # Correct pattern to include all files recursively
+    - "**/*" # Correct pattern to include all files recursively
